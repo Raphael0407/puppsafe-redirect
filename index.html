@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Redirection</title>
+    <script type="text/javascript">
+        function getQueryParam(param) {
+            var urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        var profileID = getQueryParam('ProfileID');
+        if (profileID) {
+            window.location.href = "https://puppsafe.adalo.com/PublicProfilePage?ProfileID=" + profileID;
+        } else {
+            document.write("Profile ID is missing");
+        }
+    </script>
+</head>
+<body>
+    Redirecting...
+</body>
+</html>
